@@ -1,0 +1,73 @@
+<ion-header  >
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/agendamento"></ion-back-button>
+    </ion-buttons>
+    <ion-title color ="light" >
+      Pet Shower
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color = "light" class ="ion-padding">
+  <div>
+    <ion-item color = "light" > 
+      <h2>
+        <ion-label>Qual a raça?</ion-label>
+        <ion-input  color = "primary" (keypress) = "verificacaoRaca($event)" type="text" placeholder = "ex: Buldogue" required [(ngModel)]="newDados.racaValue"></ion-input>
+      </h2>
+    </ion-item>
+
+    <ion-item color = "light">
+      <h2>
+         <ion-label >Qual o peso? </ion-label >         
+          <ion-input color  = "primary" (keypress) = "verificacaoPeso($event)"  type="number" placeholder = "0 Kg" newDados.pesoValue.required  [(ngModel)]="newDados.pesoValue" min="1" max = "40"></ion-input>
+    </h2>
+     
+      
+    </ion-item>
+    
+
+    <h2>
+      <p>Precisará de transporte?</p>
+    </h2>
+  
+    <ion-row>
+      <ion-col size="6">
+        <div class="city-card ion-activatable">
+          <img src="https://i.imgur.com/oYFKSvR.png">
+          <h3>Sim</h3>
+        </div>
+
+      </ion-col>
+      <ion-col size="6">
+        <div class="city-card ion-activatable">
+          <img  src="https://i.imgur.com/uiTPoEX.png">
+          <h3>Não</h3>
+        </div>
+      </ion-col>
+    </ion-row>    
+
+    <ion-row>     
+        <ion-col size = "1.5">
+        </ion-col>
+        <ion-col size = "3">
+          <ion-button routerLink="/tabs/agendamento/informacoes/gps"
+           [disabled] = "newDados.racaValue === '' || newDados.pesoValue === '' " (click)="save()" >
+            Sim
+          </ion-button>
+        </ion-col>
+        <ion-col size = "3">
+        </ion-col>     
+        <ion-col size = "3">
+          <ion-button routerLink="/tabs/agendamento/escolha"
+           [disabled] = "newDados.racaValue === '' || newDados.pesoValue === '' " (click)="save()">
+            Não
+          </ion-button>
+        </ion-col>
+        <ion-col size = "1.5">
+        </ion-col>
+      </ion-row>
+
+    </div>
+</ion-content>

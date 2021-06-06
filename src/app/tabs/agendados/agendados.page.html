@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title color = "light ">Agendados</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color = "light" class = "ion-padding">
+    <h2>
+      <ion-list color = "light">
+        <ion-item color = "light" *ngFor = "let entradas of entradas">
+          <ion-label>
+            <h4>{{entradas.dados.agendamentoValue}}</h4>
+            <p>Dia e Hora: {{entradas.dados.diaValue | date: 'dd/MM/yyyy'}}- 
+              {{entradas.dados.horaValue | date: 'H:mm'}}</p>
+            <p>Espécie: {{entradas.agendamento.especieValue}} - {{entradas.agendamento.sexoValue}}</p>
+            <p>Raça: {{entradas.informacoes.racaValue}} - Peso: {{entradas.informacoes.pesoValue}} Kg</p>
+            <p>{{entradas.dados.profissionalValue === '' ?  'Veterinário:' : 'Profissional:'}}
+               {{entradas.dados.profissionalValue}}{{entradas.dados.veterinarioValue}}</p>
+            <p>{{entradas.dados.profissionalValue === '' ?  'Motivo:' : ''}}
+                {{entradas.dados.motivoValue}}</p>  
+            <p >  {{entradas.transporte.endereco2Value !== '' ?  'Endereço:' : ''}}
+             {{entradas.transporte.endereco2Value}}</p>      
+
+          </ion-label>
+        </ion-item>
+      </ion-list>
+   </h2>
+  
+  </ion-content>
+  <ion-row>
+    <div>
+      <ion-button  (click)="compartilharAPP()" color = "tertiary" size ="default">  Compartilhar APP  
+        <ion-icon name="share-social-outline"></ion-icon></ion-button>
+    </div>
+</ion-row>

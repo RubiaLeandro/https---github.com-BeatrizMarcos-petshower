@@ -1,0 +1,58 @@
+<ion-header >
+<ion-toolbar color="primary">
+  <ion-buttons slot="start">
+    <ion-back-button defaultHref="/tabs/agendamento/informacoes"></ion-back-button>
+  </ion-buttons>
+<ion-title color ="light" >
+Pet Shower
+</ion-title>
+</ion-toolbar>
+</ion-header>
+
+<ion-content color = "light" class ="ion-padding">
+
+<h2>
+<p>O que deseja agendar?</p>
+ </h2>
+   
+  <ion-row >
+    <ion-col size="6">
+      <div class="city-card ion-activatable">
+       <a routerLink="/tabs/agendamento/consulta" >
+       <img src="https://i.imgur.com/o7I5qXr.png">
+       <h3>Consulta</h3>
+       </a>  
+      </div>
+    </ion-col>
+
+    <ion-col size="6">
+      <div class="city-card ion-activatable">
+        <a routerLink="/tabs/agendamento/banho" > 
+        <img  src="https://i.imgur.com/CYuJUcg.png">
+        <h3>Banho</h3>
+        </a>  
+      </div>
+    </ion-col>
+  </ion-row>
+
+  <ion-row >
+   <ion-col size="6">
+      <div class="city-card ion-activatable">
+        <a routerLink="/tabs/agendamento/banhoetosa">
+        <img  src="https://i.imgur.com/7yr6ePd.png">
+        <h3>Banho e Tosa</h3> 
+        </a>  
+      </div>
+    </ion-col>
+
+    <ion-col size="6">
+      <div class="city-card ion-activatable">
+          <a routerLink="/tabs/agendamento/tudo">
+          <img src="https://i.imgur.com/M7v4L0A.png">
+          <h3>Consulta,Banho e Tosa</h3>    
+          </a> 
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-content>
+

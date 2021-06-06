@@ -1,0 +1,26 @@
+<ion-content color= "light">
+
+  <div class="flex-center">
+    <ion-card>
+      <ion-card-header color="primary">
+        <ion-card-title><h1>Login</h1></ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-item>
+          <ion-label color="tertiary" position= "floating">E-mail</ion-label>
+          <ion-input type="email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label color="tertiary" position= "floating">Senha</ion-label>
+          <ion-input type="passaword"></ion-input>
+        </ion-item>
+        <ion-button color="primary" size="full" (click)="login()" ><h2>Login</h2></ion-button>
+        <ion-button color="primary" size="full" fill="clear">Cadastrar</ion-button>
+        <ion-button color="tertiary" size="full" fill="clear"><h3>Esqueci E-mail/Senha</h3></ion-button>
+      </ion-card-content>
+    </ion-card> 
+
+  </div>
+
+</ion-content>

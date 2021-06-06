@@ -1,0 +1,26 @@
+.list-md {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    background: var(--ion-item-background, var(--ion-background-color, light ));
+}
+.sc-ion-label-md-s h3, .sc-ion-label-md-s h4, .sc-ion-label-md-s h5, .sc-ion-label-md-s h6 {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: normal;
+}
+.button {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    margin-left: -104.5px; /*104.5px is half of the button's width*/
+}

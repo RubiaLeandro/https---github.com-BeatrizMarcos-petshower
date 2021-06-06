@@ -1,0 +1,59 @@
+<ion-header >
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/agendamento/escolha"></ion-back-button>
+    </ion-buttons>
+  <ion-title color ="light" >
+  Pet Shower <br> Banho
+  </ion-title>
+  </ion-toolbar>
+  </ion-header>
+
+
+<ion-content color = "light" class ="ion-padding">
+
+  <h5>
+    Para finalizar o agendamento do Banho e Tosa, escolha o dia, hora e o profissional desejado:
+  </h5>
+  
+  <ion-item color = "light">
+    <ion-label>Escolha o dia</ion-label>
+   <ion-datetime  [(ngModel)]="newDados.diaValue" placeholder="Select One" displayFormat="DD/MM/YY" 
+     min="2021" max="2021" monthValues="4,5,6" >
+    </ion-datetime>
+  </ion-item>
+
+  <ion-item color = "light">
+    <ion-label>Escolha o horário</ion-label>
+    <ion-datetime [(ngModel)]="newDados.horaValue" placeholder="Select One" displayFormat="H:mm"
+    hourValues="08am,09am,10am,11am,13pm,14pm,15pm,16pm" minuteValues="0,30">
+    </ion-datetime>
+  </ion-item> 
+
+
+  <ion-item color = "light">
+    <ion-label>Escolha o profissional:</ion-label>
+    <ion-select [(ngModel)]="newDados.profissionalValue" placeholder="Select One">
+    <ion-select-option value="Amanda"> Amanda </ion-select-option>
+    <ion-select-option value="Jessica"> Jessica </ion-select-option>
+    <ion-select-option value="Rebeca"> Rebeca </ion-select-option>
+    <ion-select-option value="Vanessa"> Vanessa </ion-select-option>
+    <ion-select-option value="Roberto"> Roberto </ion-select-option>
+    <ion-select-option value="Thiago"> Thiago </ion-select-option>
+  </ion-select>
+  </ion-item>
+
+</ion-content>
+
+  
+    <ion-row >
+      <ion-col>
+      </ion-col>
+          <ion-col> 
+            <ion-button ion-button color = "tertiary" routerLink="/tabs/agendados" (click)="save()">
+              Finalizar!
+          </ion-button>
+        </ion-col>
+      <ion-col>
+      </ion-col>
+    </ion-row>
